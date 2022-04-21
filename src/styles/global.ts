@@ -1,10 +1,10 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   :root{
     --background: #EDF2F7;
   }
-  
+
   *{
     margin: 0;
     padding: 0;
