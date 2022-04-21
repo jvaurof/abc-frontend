@@ -1,11 +1,12 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true
     },
     "extends": [
         "plugin:react/recommended",
-        "standard",
+        "airbnb",
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended"
     ],
@@ -21,12 +22,38 @@
         "react",
         "@typescript-eslint",
         "react-hooks",
-        "@typescript-eslint",
         "prettier"
     ],
     "rules": {
+      "import/prefer-default-export": "off",
       "prettier/prettier": "error",
-      "space-before-function-paren": "off",
-      "react/prop-types": "off"
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/jsx-filename-extension": [
+        1,
+        {
+        "extensions": [
+          ".tsx"
+        ]
+        }
+      ],
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "ts": "never",
+          "tsx": "never"
+        }
+     ],
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-use-before-define": [
+        "error"
+      ],
+      "react/react-in-jsx-scope": "off"
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
     }
 }
